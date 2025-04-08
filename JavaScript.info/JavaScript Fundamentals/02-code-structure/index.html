@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code structure</title>
+  </head>
+  <body>
+    <h1>Code structure</h1>
+    <script>
+      // ============Statements============
+
+      alert("Hello"); alert("World");
+      
+      // Separate lines
+      alert("Hello");
+      alert("World");
+
+      // There are cases when a newline does not mean a semicolon.
+      alert(3 +
+      1
+      + 2);
+
+      alert("Hello");
+
+      [1, 2].forEach(alert);
+
+      // An example of an error
+      alert("Hello")
+      [1, 2].forEach(alert);
+      // the code in the last example is treated as a single statement
+      alert("Hello")[1,2].forEach(alert);
+
+      // ============Comments============
+
+      // One-line comments 
+      // This comment occupies a line of its own
+      alert("Hello");
+
+      alert("World"); // This comment follows the statement
+
+      // Muliline comments
+      /* An example with two messages.
+      This is a multiline comment.
+      */
+     alert("Hello");
+     alert("World");
+
+    // If we put code inside /* ... */, it won't execute
+    /* Commenting out the code
+    alert("Hello");
+    */
+    alert("World");
+
+    // Nested comments are not supported!
+    // /*
+    //  /* nested comment ?!? */
+    // */  <== error
+    alert("World");
+    
+    </script>
+  </body>
+</html>
