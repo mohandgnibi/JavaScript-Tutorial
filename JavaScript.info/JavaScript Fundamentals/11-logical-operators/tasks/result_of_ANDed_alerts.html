@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result of AND'ed alerts</title>
+</head>
+<body>
+    
+    <h1>What is the result of AND'ed alerts?</h1>
+
+    <script>
+
+        // What will this code show?
+
+        alert( alert(1) && alert(2) );
+
+        // The answer: '1', and then 'undefined'.
+
+        /* 
+        * The call to alert returns undefined 
+        * (it just shows a message, so there’s no meaningful return).
+        * Because of that, && evaluates the left operand (outputs 1), 
+        * and immediately stops, because undefined is a falsy value. 
+        * And && looks for a falsy value and returns it, so it’s done.
+        * 
+        */
+    </script>
+
+</body>
+</html>

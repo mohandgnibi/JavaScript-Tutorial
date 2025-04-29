@@ -208,7 +208,7 @@ if (company == "Netscape") {
  * Use if when you need to execute different branches of code.
  */
 
-// ======================== Non-traditional use of '?' ========================//
+// ======================== Summary ========================//
 
 /**
  * Topics covered:
