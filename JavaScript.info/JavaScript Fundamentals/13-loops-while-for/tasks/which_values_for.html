@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which value for</title>
+</head>
+<body>
+  
+  <h1>Which values get shown by the "for" loop?</h1>
+
+  <script>
+
+    /**
+     * For each loop write down which values it is going to show. Then compare with the answer.
+     * 
+     * Both loops alert same values or not?
+     */
+
+    // 1. The postfix form:
+
+    for (let i = 0; i < 5; i++) alert( i );
+
+    
+    // 2. The prefix form:
+
+    for (let i = 0; i < 5; ++i) alert( i );
+
+    /**
+     * That can be easily deducted from the algorithm of for:
+     * 
+     *  1. Execute once 'i = 0' before everything (begin).
+     *  2. Check the condition 'i < 5'
+     *  3. If true – execute the loop body alert(i), and then 'i++'
+     * 
+     * The increment 'i++' is separated from the condition check (2).
+     *  That’s just another statement.
+     * 
+     * The value returned by the increment is not used here, 
+     * so there’s no difference between 'i++' and '++i'.
+     * 
+     * That can be easily de
+     */
+    
+  </script>
+
+</body>
+</html>

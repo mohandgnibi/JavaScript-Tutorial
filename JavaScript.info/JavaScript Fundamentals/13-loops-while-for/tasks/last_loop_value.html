@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last loop value</title>
+</head>
+<body>
+    
+    <h1>Last loop value</h1>
+
+    <script>
+        
+        // What is the last value alerted by this code? Why?
+
+        let i = 3;
+
+        while (i) {
+            alert( i--);
+        }
+
+        /**
+         * The answer: 1.
+         * 
+         * Every loop iteration decreases i by 1. 
+         * The check while(i) stops the loop when i = 0.
+         * 
+         * Hence, the steps of the loop form the following sequence (“loop unrolled”):
+         * 
+         * let i = 3;
+         * 
+         * alert(i--); // shows 3, decreases i to 2
+         * alert(i--); // shows 2, decreases i to 1
+         * alert(i--); // shows 1, decreases i to 0
+         * done, while(i) check stops the loop
+        */
+
+    </script>
+
+</body>
+</html>
