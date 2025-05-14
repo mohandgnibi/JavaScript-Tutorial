@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is "else" required?</title>
+</head>
+<body>
+  
+  <h1>Is 'else' required?</h1>
+
+  <script>
+
+    // Is "else" required?
+
+    // The following function returns true if the parameter age is greater than 18.
+
+    // Otherwise it asks for a confirmation and returns its result:
+
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } else {
+        // ...
+        return confirm('Did parents allow you?');
+      }
+    }
+
+    // Will the function work differently if else is removed?
+
+    function checkAge(age) {
+      if (age > 18) {
+        return true;
+      }
+      // ...
+      return confirm('Did parents allow you?');
+    }
+
+    // Is there any difference in the behavior of these two variants?
+
+    // Solution
+    
+    /**
+     * No difference!
+     * 
+     * n both cases, return confirm('Did parents allow you?') executes exactly
+     * when the if condition is falsy.
+     */
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function min(a,b)</title>
+</head>
+<body>
+  
+  <h1>Function min(a,b)</h1>
+
+  <script>
+
+    // Function min(a,b)
+
+    /**
+     * Write a function min(a,b) which returns the least of two numbers a and b.
+     * 
+     * For instance:
+     * 
+     * min(2, 5) == 2
+     * min(3, -1) == -1
+     * min(1, 1) == 1
+     * 
+     */
+
+    // Solution:
+
+    // Using 'if':
+
+    function min(a, b) {
+      if (a < b) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+
+    
+    // Using a question mark operator '?':
+
+    function min(a , b) {
+      return (a < b) ? a : b;
+    }
+
+    // P.S. In the case of an equality a == b it does not matter what to return.
+    
+  </script>
+
+</body>
+</html>
