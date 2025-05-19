@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rewrite with arrow functions</title>
+</head>
+<body>
+  
+  <h1>Rewrite with arrow functions</h1>
+
+  <script>
+
+    // Rewrite with arrow functions
+
+    // Replace Function Expressions with arrow functions in the code below:
+
+    function ask(question, yes, no) {
+      if (confirm(question)) yes();
+      else no();
+    }
+
+    ask(
+      "Do you agree?",
+      function() { alert("You agreed."); },
+      function() { alert("You canceld the execution."); }
+    );
+
+    // Solution
+    
+    function ask(question, yes, no) {
+      if (confirm(question)) yes();
+      else no();
+    }
+
+    ask(
+      "Do you agree?",
+      () => alert("You agrred."),
+      () => alert("You canceled the execution.")
+    );
+
+  </script>
+
+</body>
+</html>
