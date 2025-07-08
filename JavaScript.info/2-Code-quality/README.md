@@ -11,4 +11,3 @@
 5. [Automated testing with Mocha](https://javascript.info/testing-mocha)
 
 6. [Polyfills and transpilers](https://javascript.info/polyfills)
-
