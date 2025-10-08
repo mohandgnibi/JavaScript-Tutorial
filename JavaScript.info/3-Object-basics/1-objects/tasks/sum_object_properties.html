@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum object properties</title>
+</head>
+<body>
+  <h1>Sum object properties</h1>
+
+  <script>
+
+    // We have an object storing salaries of our team:
+
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
+    };
+
+    // Write the code to sum all salaries and store in the variable 'sum'. Should be 390
+    // in the example above.
+
+    // If 'salaries' is empty, then the result must be '0'.
+
+    // Solution
+
+    let sum = 0;
+
+    for (let key in salaries) {
+      sum += salaries[key];
+    }
+
+    alert(sum); // 390
+
+  </script>
+</body>
+</html>
