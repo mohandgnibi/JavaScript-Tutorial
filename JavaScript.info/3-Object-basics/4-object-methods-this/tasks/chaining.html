@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+</head>
+<body>
+  
+  <h1>Chaining</h1>
+
+  <script>
+
+    // There’s a ladder object that allows you to go up and down:
+    let ladder = {
+      step: 0,
+
+      up() {
+        this.step++;
+      },
+
+      down() {
+        this.step--;
+      },
+
+      showStep: function() { // shows the current step
+        alert( this.step );
+      }
+    };
+
+    // Now, if we need to make several calls in sequence, we can do it like this:
+    ladder.up();
+    ladder.up();
+    ladder.down();
+    ladder.showStep(); // 1
+    ladder.down();
+    ladder.showStep(); // 0
+
+    // Modify the code of up, down, and showStep to make the calls chainable, like this:
+    ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+
+    // Such an approach is widely used across JavaScript libraries.
+
+    // Solution
+
+    // The solution is to return the object itself from every call.
+
+    ladder = {
+      step: 0,
+
+      up () {
+        this.step++;
+        return this;
+      },
+
+      down() {
+        this.step--;
+        return this;
+      },
+
+      showStep() {
+        alert(this.step);
+        return this;
+      }
+    };
+
+    ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+
+    // We also can write a single call per line. For long chains it’s more readable:
+    ladder
+      .up()
+      .up()
+      .down()
+      .showStep() // 1
+      .down()
+      .showStep(); // 0
+
+  </script>
+  
+</body>
+</html>

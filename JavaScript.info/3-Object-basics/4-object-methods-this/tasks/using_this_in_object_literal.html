@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1</title>
+</head>
+<body>
+  
+  <h1>Using "this" in object literal</h1>
+
+  <script>
+
+    // Here the function 'makeUser' returns an object.
+
+    //What is the result of accessing its ref? Why?
+
+    function makeUser() {
+      return {
+        name: "John",
+        ref: this
+      };
+    }
+
+    let user = makeUser();
+
+    alert( user.ref.name ); // What's the result?
+
+    // Solution
+
+    // TypeError: Cannot read properties of undefined (reading 'name')
+
+    /**
+     * That’s because rules that set 'this' do not look at object definition. 
+     * Only the moment of call matters.
+     */
+
+    // We can rewrite the function and return the same this with undefined value:
+    function makeUser() {
+      return this; // this time there's no object literal
+    }
+
+    alert( makeUser().name); // TypeError: Cannot read properties of undefined (reading 'name')
+
+    // Here’s the opposite case:
+    function makeUser() {
+      return {
+        name: "John",
+        ref() {
+          return this;
+        }
+      };
+    }
+
+    user = makeUser();
+
+    alert( user.ref().name); // John
+
+    // Now it works, because user.ref() is a method. And the value of 'this' is 
+    // set to the object before dot '.'
+    
+  </script>
+
+</body>
+</html>
