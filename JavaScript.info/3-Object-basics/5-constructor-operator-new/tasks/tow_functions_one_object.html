@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks 1</title>
+</head>
+<body>
+  
+  <h1>Tow functions - one object</h1>
+
+  <script>
+    /*
+    Is it possible to create functions 'A' and 'B' so that 'new a() == new B()'?
+
+    function A() { ... }
+    function B() { ... }
+
+    let a = new A();
+    let b = new B();
+
+    alert( a == b); // true
+
+    If it is, then provide an example of their code.
+    */
+
+    // Solution
+
+    let obj = {};
+
+    function A() { return obj; }
+    function B() { return obj; }
+
+    alert( new A() == new B() ); // true
+
+  </script>
+  
+</body>
+</html>
