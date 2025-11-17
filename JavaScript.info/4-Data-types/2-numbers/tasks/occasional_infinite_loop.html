@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+</head>
+<body>
+    
+  <h1>An occasional infinite loop</h1>
+  
+  <script>
+    // An occasional infinite loop
+
+    /* 
+    This loop is infinite. It never ends. Why?
+
+    let i = 0;
+    while (i != 10) {
+      i += 0.2;
+    }
+    
+    */
+
+    // Solution
+
+    /*
+    That’s because 'i' would never equal '10'.
+
+    Run it to see the real values of 'i':
+    */
+
+    let i = 0;
+
+    while (i < 11) {
+      i += 0.2;
+      if (i > 9.8 && i < 10.2) alert(i);
+    }
+
+    
+    // None of them is exactly '10'.
+
+    // Such things happen because of the precision losses when adding fractions like 0.2.
+
+    // Conclusion: evade equality checks when working with decimal fractions.
+    
+  </script>
+</body>
+</html>
