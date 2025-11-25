@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2</title>
+</head>
+<body>
+  
+  <h1>Array operations</h1>
+
+  <script>
+
+    // Array operations.
+
+    /*
+    Let’s try 5 array operations.
+
+      1. Create an array styles with items “Jazz” and “Blues”.
+      2. Append “Rock-n-Roll” to the end.
+      3. Replace the value in the middle with “Classics”. Your code for finding 
+         the middle value should work for any arrays with odd length.
+      4. Strip off the first value of the array and show it.
+      5. Prepend Rap and Reggae to the array.
+
+    The array in the process:
+
+      1 Jazz, Blues
+      2 Jazz, Blues, Rock-n-Roll
+      3 Jazz, Classics, Rock-n-Roll
+      4 Classics, Rock-n-Roll
+      5 Rap, Reggae, Classics, Rock-n-Roll
+    */
+
+    // Solution:
+
+    let styles = ["Jazz", "Blues"];
+
+    styles.push("Rock-n-Roll");
+    styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+    alert( styles.shift() );
+    styles.unshift("Rap", "Reggae");
+    
+  </script>
+
+</body>
+</html>
